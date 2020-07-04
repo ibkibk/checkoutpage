@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Checkout Form</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="image" src="images/LOGO.png" />
+      <hr />
+    </header>
+    <div class="wrapper">
+      <div id="content-wrapper">
+        <div class="column" id="columne">
+          <p class="last">50 % off if you buy : <span id="demo"></span></p>
+          <!-- <img id="featured" src="images/image1.jpg" /> -->
+          <video id="featured" controls>
+            <source src="images/video.mp4" type="video/mp4" />
+          </video>
+          <div id="slide-wrapper">
+            <div id="slider">
+              <video class="thumbnail" id="featured" controls>
+                <source src="images/video.mp4" type="video/mp4" />
+              </video>
+              <img class="thumbnail" src="images/image1.jpg" />
+              <img class="thumbnail" src="images/image2.jpg" />
+              <img class="thumbnail" src="images/image3.png" />
+              <img class="thumbnail" src="images/image4.jpg" />
+              <img class="thumbnail" src="images/image5.jpg" />
+            </div>
+          </div>
+        </div>
+        <div class="column" id="new">
+          <h1>Swytch, the world's smallest & lightest eBike kit</h1>
+          <h3 class="price">£399</h3>
+          <p>
+            Your bike. Electric. Turn any bicycle into a lightweight, 250W
+            electric bike with 50 km range.
+          </p>
+          <div class="payment">
+            <div class="container">
+              <div class="header">
+                <div class="pay">Payment</div>
+              </div>
+              <form id="form" class="form">
+                <div class="form-control pace">
+                  <label for="name">Name</label>
+                  <p class="fas fa-user"></p>
+                  <input
+                    type="text"
+                    class="net"
+                    placeholder="Name"
+                    id="username"
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
+                <div class="form-control pace">
+                  <label for="email">Email</label>
+                  <p class="fas fa-envelope"></p>
+                  <input
+                    type="email"
+                    placeholder="swytch@gmail.com"
+                    id="email"
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
+                <div class="form-control pace">
+                  <label for="username">Card Number</label>
+                  <p class="far fa-credit-card"></p>
+                  <input
+                    type="text"
+                    data-mask="0000 0000 0000 0000"
+                    maxlength="16"
+                    placeholder="1234 1234 1234 1234"
+                    id="cardNumber"
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
+                <div class="next">
+                  <div class="form-control pace">
+                    <label for="username">Expire Date</label>
+                    <p class="far fa-calendar-alt"></p>
+                    <input
+                      type="text"
+                      data-mask="00/00"
+                      placeholder="MM / YY"
+                      id="date"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                  </div>
+                  <div class="form-control pace">
+                    <label for="username">CVC</label>
+                    <p class="fas fa-lock"></p>
+                    <input
+                      type="text"
+                      data-mask="000"
+                      placeholder="000"
+                      id="cvc"
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                  </div>
+                </div>
+                <button>Pay</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  </body>
+</html>
