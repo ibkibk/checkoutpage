@@ -20,6 +20,34 @@ const cardNumber = document.getElementById("cardNumber");
 const date = document.getElementById("date");
 const cvc = document.getElementById("cvc");
 
+// const btnsend = document.querySelector("button");
+// const mass = document.querySelector("h1");
+// btnsend.addEventListener("click", (e) => {
+//   e.preventDefault();
+
+//   btnsend.innerText = "Payment Confirmed";
+//   checkInputs();
+// });
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const btnsend = document.querySelector("button");
+  const mass = document.querySelector("h1");
+  // let inputs = document.querySelector("input");
+  btnsend.addEventListener("click", (e) => {
+    e.preventDefault();
+    btnsend.innerText = "Payment Processing ...";
+    setTimeout(() => {
+      // inputs.forEach((input) => (input.value = ""));
+      btnsend.innerText = "Payment";
+      mass.innerText = "Payment Confirmed";
+    }, 1000);
+    checkInputs();
+  });
+  checkInputs();
+  clearField();
+});
+
 function checkInputs() {
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
@@ -66,12 +94,6 @@ function checkInputs() {
   }
 }
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  checkInputs();
-});
-
 function setErrorFor(input, message) {
   const formControl = input.parentElement;
   const small = formControl.querySelector("small");
@@ -82,6 +104,12 @@ function setErrorFor(input, message) {
 function setSuccessFor(input) {
   const formControl = input.parentElement;
   formControl.className = "form-control success";
+}
+
+function clearField() {
+  if (document.getElementById("form")) {
+    document.form.reset();
+  }
 }
 
 function isEmail(email) {
