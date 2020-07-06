@@ -29,21 +29,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     btnsend.innerText = "Payment Processing ...";
     setTimeout(() => {
-      if ((btnsend.innerText = isFormValid)) {
-        ("Payment Confimed");
-        return (
-          (form.style.backgroundColor = "green") &&
-          (form.style.border = "green") &&
-          (form.style.textAlign = "center") &&
-          (form.innerText = "Payment Confirmed")
-        );
-      } else {
-        return (
-          (btnsend.innerText = "Payment Faild") &&
-          (btnsend.style.backgroundColor = "red") &&
-          (btnsend.style.border = "red")
-        );
-      }
+      btnsend.innerText = isFormValid ? "Payment Confirmed" : "Payment Failed";
     }, 1000);
     checkInputs();
   });
@@ -113,6 +99,10 @@ function setSuccessFor(input) {
 
 function clearField() {
   if (document.getElementById("form")) {
+    return (
+      (form.innerText = "Payment Confirmed") &&
+      (form.style.textAlign = "center")
+    );
   }
 }
 
