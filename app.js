@@ -14,25 +14,25 @@ for (let i = 0; i < thumbnails.length; i++) {
 }
 
 // count time
-let countDownDate = new Date("July 6, 2020 23:50:25").getTime();
+// let countDownDate = new Date("July 6, 2020 23:50:25").getTime();
 
-let x = setInterval(() => {
-  let now = new Date().getTime();
+// let x = setInterval(() => {
+//   let now = new Date().getTime();
 
-  let distance = countDownDate - now;
+//   let distance = countDownDate - now;
 
-  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("demo").innerHTML =
-    hours + "h " + minutes + "m " + seconds + "s ";
+//   document.getElementById("demo").innerHTML =
+//     hours + "h " + minutes + "m " + seconds + "s ";
 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+//   if (distance < 0) {
+//     clearInterval(x);
+//     document.getElementById("demo").innerHTML = "EXPIRED";
+//   }
+// }, 1000);
 // card validation
 const form = document.getElementById("form");
 const username = document.getElementById("username");
